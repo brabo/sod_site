@@ -1,0 +1,29 @@
+<title> SOD - Scanner for Open DNSs </title>
+<h1> What is it? </h1>
+<p><font size="5"><pre>SOD is a tool to scan the entire internet for open/recursive DNS servers.
+It's a server/client, of which the server hands out /24 subnets to the clients,
+the clients then nmap the range on port 53, for every positive result it
+then tests what reply it sends, and uses that to determine wether it is open/recursive.
+The server then geo-ips the results to city level, and stores everything in a database.
+
+Off course, scanning the entire /0 is a lot of legwork, this is why we are
+looking for participants in this experiment.
+If you feel like participating, please feel free to have a look at the code
+at <a href="https://github.com/GlobalShellz/sod">our Github repo</a>.
+
+Running the client shouldn't be too hard, once cloned, './sod.thinpack.pl sod.gshellz.org'
+should try to install the needed perl dependencies in a subdir of the project,
+and run it. Once connected, you will see it doing its work.
+
+We're still working on a real site, which will offer statistics as well as forms
+to query the live database.
+Once that's finished, there will also be a download link to a daily updated db.
+
+Feel free to contact us on <a href="irc://irc.freenode.net/##sod">IRC</a>.
+</pre></font></p>
+
+<div id="Footer">
+   <p>
+      <center><a href="http://sod-dev.gshellz.org/stats/">SOD Stats</a> | <a href="http://sod-dev.gshellz.org/query/">SOD DB Query</a></center>
+   </p>
+</div>
